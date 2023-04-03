@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::get('/sauces', function () {
+    return view('sauces');
+});
+
+Route::get('/sauces/{id}', function ($id) {
+    return view('sauce', ['id' => $id]);
+});
+
+Route::get('/ajoutSauce', function () {
+    return view('ajoutSauce');
 });
